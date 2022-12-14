@@ -13,8 +13,8 @@ io.on("connection", function (socket) {
         console.log(`🔥Socket: Disconnect ${socket.id}`);
     });
 
-    socket.on("client-send", function(data){
-        io.sockets.emit("server-send", data);
+    socket.on("client-send-all", function(data){
+        io.sockets.emit("server-send-all", data);
     })
 });
 
